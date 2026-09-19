@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>6 Months Anniversary ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'Rubik Bubbles', cursive;
+    background: white;
+    color: #ff4d6d;
+    overflow: hidden;
+}
+
+/* CONTENT */
+
+#content {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* HEADINGS */
+
+h1 {
+    margin: 10px 20px 25px;
+    font-size: 32px;
+}
+
+/* BUTTON */
+
+button {
+    padding: 12px 25px;
+    border-radius: 20px;
+    border: none;
+    font-size: 18px;
+    margin: 20px 10px 0;
+    cursor: pointer;
+    font-family: 'Rubik Bubbles', cursive;
+    background: #ff4d6d;
+    color: white;
+}
+
+/* IMAGE */
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+/* TEXT BOX */
+
+.box {
+    border: 2px solid black;
+    width: fit-content;
+    max-width: 75%;
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.7;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+/* ❤️ HEARTS */
+
+.heart {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #ff4d6d;
+    transform: rotate(45deg);
+    opacity: 0.25;
+    filter: blur(1px);
+    z-index: 1;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #ff4d6d;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -8px;
+    left: 0;
+}
+
+.heart::after {
+    left: -8px;
+    top: 0;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0) rotate(45deg);
+    }
+
+    to {
+        transform: translateY(-110vh) rotate(45deg);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .box {
+        max-width: 90%;
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 20px;
+    }
+
+    .circle {
+        width: 140px;
+        height: 140px;
+    }
+
+    button {
+        font-size: 17px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="content"></div>
+
+<script>
+
+let content = document.getElementById("content");
+
+
+/* ❤️ FLOATING HEARTS */
+
+setInterval(() => {
+
+    let h = document.createElement("div");
+
+    h.className = "heart";
+
+    h.style.left = Math.random() * 100 + "vw";
+
+    h.style.bottom = "-20px";
+
+    h.style.animation = "float 7s linear";
+
+    document.body.appendChild(h);
+
+    setTimeout(() => h.remove(), 7000);
+
+}, 400);
+
+
+/* PAGE 1 */
+
+function page1() {
+
+    content.innerHTML = `
+
+        <h1>
+            Happy 6th months anniversary my love ❤️
+        </h1>
+
+        <img src="IMG_20260919_185958_815.jpg" class="circle">
+
+        <button onclick="page2()">
+            Continue
+        </button>
+
+    `;
+}
+
+
+/* PAGE 2 */
+
+function page2() {
+
+    content.innerHTML = `
+
+        <div class="box">
+
+            Six months with you feels like six months
+            full of happiness, comfort and beautiful memories.
+            I am so grateful for every moment we have shared
+            together, every conversation, every laugh and every
+            little moment that became a memory with you.
+
+            <br><br>
+
+            You are not just someone I love.
+            You are my favorite person, my best friend,
+            my safe place and one of the most beautiful parts
+            of my life.
+
+            <br><br>
+
+            I love every little thing about us,
+            and I hope we keep making more memories together,
+            laughing together and choosing each other
+            again and again.
+
+        </div>
+
+        <button onclick="page3()">
+            Continue
+        </button>
+
+    `;
+
+}
+
+
+/* PAGE 3 */
+
+function page3() {
+
+    content.innerHTML = `
+
+        <div class="box">
+
+            Thank you for being beside me,
+            for loving me, understanding me,
+            listening to me and making even the
+            simplest days feel special.
+
+            <br><br>
+
+            These six months mean so much to me,
+            and I honestly can't wait to see all
+            the beautiful memories we still have
+            ahead of us.
+
+            <br><br>
+
+            Here's to us,
+            to more months,
+            more memories,
+            more laughs,
+            more love
+            and everything that comes next.
+
+            <br><br>
+
+            I love you so much ❤️
+
+        </div>
+
+    `;
+
+}
+
+
+/* START */
+
+page1();
+
+</script>
+
+</body>
+</html>
